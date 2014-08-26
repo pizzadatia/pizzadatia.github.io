@@ -1,0 +1,204 @@
+//$yellow: #f8c300;
+//$red: #a60013;
+$yellow: #fbc242;
+$red: #aa0019;
+$header-icon-big: 32px;
+$header-text-big: 35px;
+$header-text-mid: 24px;
+$header-text-small: 16px;
+
+@font-face {
+    font-family: "Raygun";
+    src: url("../fonts/raygun.eot?#iefix") format("embedded-opentype")
+         url("../fonts/raygun.woff") format("woff"),
+         url("../fonts/raygun.ttf") format("truetype"),
+         url("../fonts/raygun.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Raygun, Arial, Helvetica, sans-serif;
+    background-color: $red;
+}
+
+@mixin center-content {
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+
+    & > div {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em; // Adjusts for spacing
+    }
+}
+
+.header {
+    $border: 12px;
+    background-image: url("../img/header-bg.png");
+    height: 365px + $border;
+    overflow: hidden;
+    box-shadow: 0 (-$border) 0 $yellow inset;
+    border-bottom: $border solid $red;
+
+    .column {
+        @include center-content();
+    }
+}
+
+.header-logo {
+    background-image: url("../img/header-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.header-delivery {
+    color: white;
+    font-size: $header-text-big;
+    text-align: center;
+    border-radius: $header-text-big;
+    border: 3px solid $yellow;
+    padding: 2px 20px;
+}
+
+.header-tel {
+    width: 230px;
+    padding: 10px;
+
+    color: white;
+    text-align: right;
+    font-size: $header-text-big;
+
+    cursor: pointer;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        height: $header-icon-big;
+        width: $header-icon-big;
+        vertical-align: top;
+        background-image: url("../img/icon-tel.png");
+        background-size: contain;
+    }
+}
+
+.header-wa {
+    $size: 13px;
+    // position: relative;
+    // bottom: -50%;
+    color: $red;
+    padding: 4px;
+    font-size: $size;
+    text-align: center;
+    border-radius: $size;
+    background-color: $yellow;
+}
+
+
+.content {
+    position: relative;
+    background-color: white;
+    background-image: url("../img/bg-yellow.png");
+    background-size: (5/12*100%);
+
+    & > div {
+        min-height: 1200px;
+    }
+}
+
+.content-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+}
+
+.content-menu {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content-side {
+    padding: 0;
+    text-align: center;
+}
+
+.pizza-size {
+    display: inline-block;
+    margin: 15px 0;
+}
+.pizza-fb {
+    padding: 15px;
+    padding-bottom: 160px; // Footer height;
+    background-image: url("../img/bg-red.png");
+}
+
+.pizza-menu {
+    background-color: transparent;
+    background-image: url("../img/bg-red.png");
+
+    border-collapse:collapse;
+    width: 95%;
+    padding: 15px;
+    border: none;
+    border: 15px solid white;
+
+    tr {
+        background-color: transparent !important;
+    }
+    td {
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: $header-text-small;
+        border-left: 1px solid $yellow;
+        border-right: 1px solid $yellow;
+        padding: 10px;
+
+        &:first-child {
+            text-align: left;
+            border-left: none;
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    .menu-header {
+        border-top: 1px solid $yellow;
+        border-bottom: 1px solid $yellow;
+        td {
+            color: $yellow;
+            font-size: $header-text-big;
+        }
+        &:first-child {
+            border-top: none;
+            td {
+                font-size: $header-text-mid;
+            }
+        }
+    }
+}
+
+.fb-like-box {
+    width: 100%;
+    height: 182px;
+    margin: 15px 0;
+    border:none;
+    overflow:hidden;
+    background-color: white;
+}
