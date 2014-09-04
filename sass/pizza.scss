@@ -1,3 +1,5 @@
+@import "compass";
+
 // Configs ---------------------------------------------------------------------
 $yellow: #fbc242;
 $red: #aa0019;
@@ -29,15 +31,8 @@ $footer-height: 110px;
 }
 
 // Globals ---------------------------------------------------------------------
-@font-face {
-    font-family: "Raygun";
-    src: url("../fonts/raygun.eot?#iefix") format("embedded-opentype")
-         url("../fonts/raygun.woff") format("woff"),
-         url("../fonts/raygun.ttf") format("truetype"),
-         url("../fonts/raygun.svg") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
+
+@include font-face("Raygun", font-files("raygun.woff", "raygun.ttf", "raygun.svg"), "raygun.eot");
 
 body {
     font-family: Raygun, Arial, Helvetica, sans-serif;
@@ -178,7 +173,7 @@ body {
 
 .pizza-fb {
     padding: 15px;
-    padding-bottom: 50px; // Small
+    padding-bottom: 80px; // Small
     background-image: url("../img/bg-red.png");
 
     @media only screen and (min-width: 40.063em) { // Medium+
