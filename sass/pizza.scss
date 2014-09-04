@@ -239,6 +239,10 @@ body {
         &:last-child td {
             border-bottom: 1px solid $yellow;
         }
+
+        &:hover td {
+            background: fade-out($yellow, 0.75);
+        }
     }
 
     td, th {
