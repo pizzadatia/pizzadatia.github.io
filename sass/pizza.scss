@@ -30,13 +30,45 @@ $footer-height: 110px;
     }
 }
 
+.char-tilde {
+    position: relative;
+    &::after {
+        content: "~";
+        position: absolute;
+        left: 0.1em;
+        top: -0.6em;
+    }
+}
+.char-acute {
+    position: relative;
+    &::after {
+        content: "´";
+        position: absolute;
+        left: 0.1em;
+        top: -0.3em;
+    }
+}
+
+.char-cedilla {
+    position: relative;
+    &::after {
+        content: "¸";
+        position: absolute;
+        left: 0.1em;
+        bottom: 0;
+    }
+}
+
 // Globals ---------------------------------------------------------------------
 
 @include font-face("Raygun", font-files("raygun.woff", "raygun.ttf", "raygun.svg"), "raygun.eot");
 
 body {
-    font-family: Raygun, Arial, Helvetica, sans-serif;
     background-color: white;
+}
+
+body, h1, h3 {
+    font-family: Raygun, Arial, Helvetica, sans-serif;
 }
 
 // Header ----------------------------------------------------------------------
@@ -125,11 +157,17 @@ body {
     background-image: url("../img/bg-yellow.png");
 }
 
-.content-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0;
+.content-info {
+    padding-bottom: 80px; // Small
+    text-align: center;
+
+    h1, h3 {
+        color: $red;
+    }
+
+    @media only screen and (min-width: 40.063em) { // Medium+
+        padding-bottom: $footer-height;
+    }
 }
 
 .content-menu {
@@ -140,6 +178,13 @@ body {
 .content-side {
     padding: 0;
     text-align: center;
+}
+
+.content-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
 }
 
 // Side bar --------------------------------------------------------------------
