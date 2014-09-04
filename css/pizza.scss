@@ -78,12 +78,13 @@ body {
 
 .header-contact {
     white-space: normal;
+    & > * {
+        display: inline-block;
+    }
 }
 
 .header-tel {
-    display: block;
     padding: 10px 0;
-
     color: white;
     text-align: center;
     font-size: $header-text-huge;
@@ -109,7 +110,7 @@ body {
 .header-wa {
     $size: 13px;
     color: $red;
-    padding: 4px;
+    padding: 4px 20px;
     font-size: 1em;
     text-align: center;
     border-radius: $size;
@@ -151,7 +152,7 @@ body {
     background-image: url("../img/bg-red.png");
 
     @media only screen and (max-width: 40em) { // Mobile
-        padding-bottom: 50px;
+        padding-bottom: 70px;
     }
 }
 

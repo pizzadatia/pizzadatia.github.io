@@ -38,9 +38,10 @@ body {
 
 .header-contact {
   white-space: normal; }
+  .header-contact > * {
+    display: inline-block; }
 
 .header-tel {
-  display: block;
   padding: 10px 0;
   color: white;
   text-align: center;
@@ -61,7 +62,7 @@ body {
 
 .header-wa {
   color: #aa0019;
-  padding: 4px;
+  padding: 4px 20px;
   font-size: 1em;
   text-align: center;
   border-radius: 13px;
@@ -97,7 +98,7 @@ body {
   background-image: url("../img/bg-red.png"); }
   @media only screen and (max-width: 40em) {
     .pizza-fb {
-      padding-bottom: 50px; } }
+      padding-bottom: 70px; } }
 
 .pizza-menu {
   background-color: transparent;
