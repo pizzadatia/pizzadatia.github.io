@@ -5,54 +5,53 @@
   font-style: normal; }
 body {
   font-family: Raygun, Arial, Helvetica, sans-serif;
-  background-color: #aa0019; }
+  background-color: white; }
 
 .header {
   background-image: url("../img/header-bg.png");
-  height: 377px;
+  background-size: contain;
   overflow: hidden;
   box-shadow: 0 -12px 0 #fbc242 inset;
-  border-bottom: 12px solid #aa0019; }
-  .header .column {
-    height: 100%;
-    text-align: center;
-    white-space: nowrap; }
-    .header .column > div {
-      vertical-align: middle;
-      display: inline-block; }
-    .header .column::before {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
-      margin-right: -0.25em; }
-
-.header-logo {
-  background-image: url("../img/header-logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; }
+  border-bottom: 12px solid #aa0019;
+  text-align: center;
+  white-space: nowrap; }
+  .header > * {
+    float: none !important;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle; }
+  @media only screen and (max-width: 40em) {
+    .header {
+      white-space: normal;
+      box-shadow: none;
+      border-bottom: none;
+      padding-bottom: 12px; } }
 
 .header-delivery {
-  color: white;
-  font-size: 35px;
-  text-align: center;
-  border-radius: 35px;
+  padding: 2px;
   border: 3px solid #fbc242;
-  padding: 2px 20px; }
+  border-radius: 2em;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  background: #aa0019; }
+
+.header-contact {
+  white-space: normal; }
 
 .header-tel {
-  width: 230px;
-  padding: 10px;
+  display: block;
+  padding: 10px 0;
   color: white;
-  text-align: right;
-  font-size: 35px;
+  text-align: center;
+  font-size: 2em;
   cursor: pointer; }
   .header-tel:hover {
     color: white;
     text-decoration: none; }
   .header-tel::before {
     content: '';
+    margin-right: 4px;
     display: inline-block;
     height: 32px;
     width: 32px;
@@ -63,7 +62,7 @@ body {
 .header-wa {
   color: #aa0019;
   padding: 4px;
-  font-size: 13px;
+  font-size: 1em;
   text-align: center;
   border-radius: 13px;
   background-color: #fbc242; }
@@ -73,8 +72,6 @@ body {
   background-color: white;
   background-image: url("../img/bg-yellow.png");
   background-size: 41.66667%; }
-  .content > div {
-    min-height: 1200px; }
 
 .content-footer {
   position: absolute;
@@ -98,28 +95,40 @@ body {
   padding: 15px;
   padding-bottom: 160px;
   background-image: url("../img/bg-red.png"); }
+  @media only screen and (max-width: 40em) {
+    .pizza-fb {
+      padding-bottom: 50px; } }
 
 .pizza-menu {
   background-color: transparent;
   background-image: url("../img/bg-red.png");
+  table-layout: fixed;
   border-collapse: collapse;
   width: 95%;
-  padding: 15px;
-  border: none;
   border: 15px solid white; }
+  @media only screen and (max-width: 40em) {
+    .pizza-menu {
+      width: 100%;
+      border-left: none;
+      border-right: none; } }
   .pizza-menu tr {
     background-color: transparent !important; }
   .pizza-menu td {
     color: white;
     text-align: center;
     text-transform: uppercase;
-    font-size: 16px;
+    text-overflow: ellipsis;
+    font-size: 1em;
     border-left: 1px solid #fbc242;
     border-right: 1px solid #fbc242;
-    padding: 10px; }
+    padding: 10px 0;
+    overflow: hidden;
+    width: 25%; }
     .pizza-menu td:first-child {
       text-align: left;
-      border-left: none; }
+      border-left: none;
+      width: auto;
+      padding-left: 10px; }
     .pizza-menu td:last-child {
       border-right: none; }
   .pizza-menu .menu-header {
@@ -127,16 +136,17 @@ body {
     border-bottom: 1px solid #fbc242; }
     .pizza-menu .menu-header td {
       color: #fbc242;
-      font-size: 35px; }
+      font-size: 1.5em; }
     .pizza-menu .menu-header:first-child {
       border-top: none; }
       .pizza-menu .menu-header:first-child td {
-        font-size: 24px; }
+        font-size: 1.2em; }
 
 .fb-like-box {
   width: 100%;
   height: 182px;
-  margin: 15px 0;
   border: none;
   overflow: hidden;
   background-color: white; }
+
+/*# sourceMappingURL=pizza.css.map */

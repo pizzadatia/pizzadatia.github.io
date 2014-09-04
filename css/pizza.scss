@@ -1,11 +1,10 @@
-//$yellow: #f8c300;
-//$red: #a60013;
 $yellow: #fbc242;
 $red: #aa0019;
 $header-icon-big: 32px;
-$header-text-big: 35px;
-$header-text-mid: 24px;
-$header-text-small: 16px;
+$header-text-huge: 2em;
+$header-text-big: 1.5em;
+$header-text-mid: 1.2em;
+$header-text-small: 1em;
 
 @font-face {
     font-family: "Raygun";
@@ -19,7 +18,7 @@ $header-text-small: 16px;
 
 body {
     font-family: Raygun, Arial, Helvetica, sans-serif;
-    background-color: $red;
+    background-color: white;
 }
 
 @mixin center-content {
@@ -44,40 +43,50 @@ body {
 .header {
     $border: 12px;
     background-image: url("../img/header-bg.png");
-    height: 365px + $border;
+    background-size: contain;
     overflow: hidden;
     box-shadow: 0 (-$border) 0 $yellow inset;
     border-bottom: $border solid $red;
 
-    .column {
-        @include center-content();
+    // Foundation grid overload
+    text-align: center;
+    white-space: nowrap;
+    & > * {
+        float: none !important;
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    @media only screen and (max-width: 40em) { // Mobile
+        white-space: normal;
+        box-shadow: none;
+        border-bottom: none;
+        padding-bottom: $border;
     }
 }
 
-.header-logo {
-    background-image: url("../img/header-logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.header-delivery {
+    padding: 2px;
+    border: 3px solid $yellow;
+    border-radius: $header-text-huge;
+    font-size: $header-text-huge;
+    color: white;
+    text-align: center;
+    background: $red;
 }
 
-.header-delivery {
-    color: white;
-    font-size: $header-text-big;
-    text-align: center;
-    border-radius: $header-text-big;
-    border: 3px solid $yellow;
-    padding: 2px 20px;
+.header-contact {
+    white-space: normal;
 }
 
 .header-tel {
-    width: 230px;
-    padding: 10px;
+    display: block;
+    padding: 10px 0;
 
     color: white;
-    text-align: right;
-    font-size: $header-text-big;
-
+    text-align: center;
+    font-size: $header-text-huge;
     cursor: pointer;
 
     &:hover {
@@ -87,6 +96,7 @@ body {
 
     &::before {
         content: '';
+        margin-right: 4px;
         display: inline-block;
         height: $header-icon-big;
         width: $header-icon-big;
@@ -98,11 +108,9 @@ body {
 
 .header-wa {
     $size: 13px;
-    // position: relative;
-    // bottom: -50%;
     color: $red;
     padding: 4px;
-    font-size: $size;
+    font-size: 1em;
     text-align: center;
     border-radius: $size;
     background-color: $yellow;
@@ -114,10 +122,6 @@ body {
     background-color: white;
     background-image: url("../img/bg-yellow.png");
     background-size: (5/12*100%);
-
-    & > div {
-        min-height: 1200px;
-    }
 }
 
 .content-footer {
@@ -145,17 +149,27 @@ body {
     padding: 15px;
     padding-bottom: 160px; // Footer height;
     background-image: url("../img/bg-red.png");
+
+    @media only screen and (max-width: 40em) { // Mobile
+        padding-bottom: 50px;
+    }
 }
 
 .pizza-menu {
     background-color: transparent;
     background-image: url("../img/bg-red.png");
 
+    table-layout: fixed;
     border-collapse:collapse;
+
     width: 95%;
-    padding: 15px;
-    border: none;
     border: 15px solid white;
+
+    @media only screen and (max-width: 40em) { // Mobile
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
 
     tr {
         background-color: transparent !important;
@@ -164,14 +178,19 @@ body {
         color: white;
         text-align: center;
         text-transform: uppercase;
+        text-overflow: ellipsis;
         font-size: $header-text-small;
         border-left: 1px solid $yellow;
         border-right: 1px solid $yellow;
-        padding: 10px;
+        padding: 10px 0;
+        overflow: hidden;
+        width: 25%;
 
         &:first-child {
             text-align: left;
             border-left: none;
+            width: auto;
+            padding-left: 10px;
         }
         &:last-child {
             border-right: none;
@@ -197,7 +216,6 @@ body {
 .fb-like-box {
     width: 100%;
     height: 182px;
-    margin: 15px 0;
     border:none;
     overflow:hidden;
     background-color: white;
