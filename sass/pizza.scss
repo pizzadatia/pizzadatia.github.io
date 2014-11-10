@@ -5,7 +5,7 @@
 $yellow: #fbc242;
 $red: #aa0019;
 $header-icon-big: 32px;
-$header-text-huge: 1.8em;
+$header-text-huge: 2em;
 $header-text-big: 1.5em;
 $header-text-mid: 1.2em;
 $header-text-small: 1em;
@@ -97,7 +97,7 @@ body, h1, h3 {
 
     box-shadow: 0 (-$border) 0 $yellow inset;
 
-    @media only screen and (max-width: 40em) { // Small-
+    @media only screen and (max-width: 40em) { // Small
         white-space: normal;
         border-bottom: none;
     }
@@ -110,7 +110,7 @@ body, h1, h3 {
 
 .contact-title {
     font-size: $header-text-big;
-    width: 150px;
+    width: 125px;
     margin: 0 auto 5px;
     border-radius: 20px;
     background-color: $yellow;
@@ -127,10 +127,14 @@ body, h1, h3 {
 .contact-number {
     color: white;
     font-size: $header-text-big;
+
+    @media only screen and (min-width: 64em) { // Large
+        font-size: $header-text-huge;
+    }
 }
 
 .contact-addr {
-    margin: 20px auto 0;
+    margin: 0 auto 0;
     line-height: 1.8em;
     color: $red;
     text-transform: uppercase;
@@ -190,6 +194,16 @@ body, h1, h3 {
 
 .side-yellow {
     background-image: url("../img/bg-yellow.png");
+    background-attachment: fixed;
+    padding-bottom: 2*$footer-height; // Medium
+
+    @media only screen and (max-width: 40em) { // Small
+        padding-bottom: $footer-height/2;
+    }
+
+    @media only screen and (min-width: 64em) { // Large
+        padding-bottom: $footer-height;
+    }
 }
 
 .pizza-contact {
@@ -226,18 +240,15 @@ body, h1, h3 {
 // Menu ------------------------------------------------------------------------
 .pizza-menu-wrapper {
     padding: 5px;
-    margin-bottom: $footer-height;
-
+    padding-bottom: $footer-height*2/3;
     background-color: rgba(0,0,0,0.2);
 
     @media only screen and (max-width: 40em) { // Small
         padding: 0;
-        margin-bottom: 50px;
     }
 
-    @media only screen and (min-width: 64em) { // Large+
-        margin: 10px;
-        margin-bottom: $footer-height;
+    @media only screen and (min-width: 64em) { // Large
+        padding-bottom: $footer-height;
     }
 }
 
@@ -277,7 +288,7 @@ body, h1, h3 {
         text-overflow: ellipsis;
         font-size: $header-text-small;
         
-        @media only screen and (max-width: 40em) { // Small-
+        @media only screen and (max-width: 40em) { // Small
             width: 16%;
         }
 
@@ -331,7 +342,7 @@ body, h1, h3 {
 .menu-price {
     &::before {
         content: "R$ ";
-        @media only screen and (max-width: 40em) { // Small-
+        @media only screen and (max-width: 40em) { // Small
             .menu-pizza &,
             .menu-extra & {
                 content: "";
@@ -343,7 +354,7 @@ body, h1, h3 {
 .menu-pizza-small {
     &::before {
         content: "M";
-        @media only screen and (min-width: 64em) { // Large+
+        @media only screen and (min-width: 64em) { // Large
             content: "Media";
         }
     }
@@ -352,7 +363,7 @@ body, h1, h3 {
 .menu-pizza-medium {
     &::before {
         content: "G";
-        @media only screen and (min-width: 64em) { // Large+
+        @media only screen and (min-width: 64em) { // Large
             content: "Grande";
         }
     }
@@ -361,7 +372,7 @@ body, h1, h3 {
 .menu-pizza-big {
     &::before {
         content: "GG";
-        @media only screen and (min-width: 64em) { // Large+
+        @media only screen and (min-width: 64em) { // Large
             content: "Gigante";
         }
     }
