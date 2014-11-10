@@ -1,10 +1,11 @@
+@charset "UTF-8";
 @import "compass";
 
 // Configs ---------------------------------------------------------------------
 $yellow: #fbc242;
 $red: #aa0019;
 $header-icon-big: 32px;
-$header-text-huge: 2em;
+$header-text-huge: 1.8em;
 $header-text-big: 1.5em;
 $header-text-mid: 1.2em;
 $header-text-small: 1em;
@@ -28,6 +29,10 @@ $footer-height: 110px;
       vertical-align: middle;
       margin-right: -0.25em; // Adjusts for spacing
     }
+}
+
+.center-content {
+    @include center-content;
 }
 
 .char-tilde {
@@ -71,103 +76,89 @@ body, h1, h3 {
     font-family: Raygun, Arial, Helvetica, sans-serif;
 }
 
+.container {
+    background-color: #a10018;
+    background-image: url("../img/bg-red.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: top center;
+}
+
 // Header ----------------------------------------------------------------------
 
 .header {
     $border: 12px;
     background-image: url("../img/header-bg.png");
     background-size: contain;
-    background-position: bottom;
-    overflow: hidden;
-    box-shadow: 0 (-$border) 0 $yellow inset;
-    border-bottom: $border solid $red;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 0 !important; // Foundation overload
 
-    // Foundation grid overload
-    text-align: center;
-    white-space: nowrap;
-    & > * {
-        float: none !important;
-        display: inline-block;
-        overflow: hidden;
-        vertical-align: middle;
-    }
+    box-shadow: 0 (-$border) 0 $yellow inset;
 
     @media only screen and (max-width: 40em) { // Small-
         white-space: normal;
-        box-shadow: none;
         border-bottom: none;
-        padding-bottom: $border;
     }
-}
-
-.header-delivery {
-    padding: 2px;
-    border: 3px solid $yellow;
-    border-radius: $header-text-huge;
-    font-size: $header-text-huge;
-    color: white;
-    text-align: center;
-    background: $red;
 }
 
 .header-contact {
-    white-space: normal;
-    & > * {
-        display: inline-block;
-    }
+    margin-top: 70%; // Fake center
+    text-align: center;
 }
 
-.header-tel {
-    padding: 10px 0;
-    color: white;
-    text-align: center;
-    font-size: $header-text-huge;
-    cursor: pointer;
-
-    &:hover {
-        color: white;
-        text-decoration: none;
-    }
-
-    &::before {
-        content: '';
-        margin-right: 4px;
-        display: inline-block;
-        height: $header-icon-big;
-        width: $header-icon-big;
-        vertical-align: top;
-        background-image: url("../img/icon-tel.png");
-        background-size: contain;
-    }
-}
-
-.header-wa {
-    color: $red;
-    padding: 4px 20px;
-    font-size: 1em;
-    text-align: center;
+.contact-title {
+    font-size: $header-text-big;
+    width: 150px;
+    margin: 0 auto 5px;
     border-radius: 20px;
     background-color: $yellow;
+    color: $red;
+    padding: 2px 0;
+}
+
+.contact-subtitle {
+    color: white;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.contact-number {
+    color: white;
+    font-size: $header-text-big;
+}
+
+.contact-addr {
+    margin: 20px auto 0;
+    line-height: 1.8em;
+    color: $red;
+    text-transform: uppercase;
+
+    .contact-delivery-area {
+        color: white;
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+
+.header-contact,
+.pizza-contact {
+    a {
+        cursor: pointer;
+
+        &:hover,
+        &:visited {
+            color: white;
+            text-decoration: none;
+        }
+    }
 }
 
 // Content ---------------------------------------------------------------------
 .content {
     position: relative;
-    background-color: white;
-    background-image: url("../img/bg-yellow.png");
-}
-
-.content-info {
-    padding-bottom: 80px; // Small
-    text-align: center;
-
-    h1, h3 {
-        color: $red;
-    }
-
-    @media only screen and (min-width: 40.063em) { // Medium+
-        padding-bottom: $footer-height;
-    }
+    border-top: 12px solid white;
+    margin: 0 !important;
 }
 
 .content-menu {
@@ -188,46 +179,40 @@ body, h1, h3 {
 }
 
 // Side bar --------------------------------------------------------------------
-.pizza-size {
-    display: inline-block;
-    padding: 20px;
+
+.side-delivery {
+    height: 400px; // From image
+    width: 200px; // From image
+    margin: 50px 0;
+    background-image: url("../img/banner-delivery.png");
+    background-position: top left;
+}
+
+.side-yellow {
+    background-image: url("../img/bg-yellow.png");
 }
 
 .pizza-contact {
-    margin-bottom: 20px;
-    line-height: 2em;
-    color: $red;
-    text-transform: uppercase;
+    padding: 15px 15px 0;
 
-    a {
-        color: $red;
-        
-        span {
-            font-size: 1.8em;
-            vertical-align: middle;
-        }
+    .contact-title {
+        background-color: $red;
+        color: white;
     }
 
-    & > span {
-        background: $red;
-        color: white;
-        padding: 4px 20px;
-        border-radius: 20px;
+    .contact-container {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .contact-number,
+    a, a:hover, a:visited {
+        color: $red;
     }
 }
 
 .pizza-fb {
     padding: 15px;
-    padding-bottom: 80px; // Small
-    background-image: url("../img/bg-red.png");
-
-    @media only screen and (min-width: 40.063em) { // Medium+
-        padding-bottom: $footer-height + 120px; // menu height compensantion
-    }
-
-    @media only screen and (min-width: 64em) { // Large+
-        padding-bottom: $footer-height + 70px; // menu height compensantion
-    }
 
     iframe {
         width: 100%;
@@ -240,35 +225,22 @@ body, h1, h3 {
 
 // Menu ------------------------------------------------------------------------
 .pizza-menu-wrapper {
-    $border-width: 15px;
-    border-color: white;
-    border-style: solid;
-    border-width: 0;
-    border-top-width: $border-width;
-    border-bottom-width: $border-width;
+    padding: 5px;
+    margin-bottom: $footer-height;
 
-    padding: 20px;
-    padding-bottom: $footer-height;
+    background-color: rgba(0,0,0,0.2);
 
-    background-image: url("../img/bg-red.png");
-
-    @media only screen and (max-width: 40em) { // Small-
+    @media only screen and (max-width: 40em) { // Small
         padding: 0;
-        border-left: none;
-        border-right: none;
-        border-bottom-width: 15px;
-    }
-
-    @media only screen and (min-width: 40.063em) { // Medium+
-        border-left-width: $border-width;
-        border-right-width: $border-width;
-        border-bottom-width: 0;
+        margin-bottom: 50px;
     }
 
     @media only screen and (min-width: 64em) { // Large+
-        margin-right: 20px;
+        margin: 10px;
+        margin-bottom: $footer-height;
     }
 }
+
 .pizza-menu {
     background-color: transparent;
 
@@ -276,13 +248,15 @@ body, h1, h3 {
     border-collapse: collapse;
 
     width: 100%;
-    border: none;
+    margin: 0;
+    border: 2px solid $yellow;
 
     tr {
         background-color: transparent !important;
+        border-bottom: 1px dotted transparentize($yellow, 0.75);
 
         &:last-child td {
-            border-bottom: 1px solid $yellow;
+            border-bottom: 2px solid $yellow;
         }
 
         &:hover td {
@@ -292,9 +266,9 @@ body, h1, h3 {
 
     td, th {
         width: 20%;
-        padding: 10px 0;
-        border-left: 1px solid $yellow;
-        border-right: 1px solid $yellow;
+        padding: 5px 0;
+        border-left: 2px solid $yellow;
+        border-right: 2px solid $yellow;
         overflow: hidden;
 
         color: white;
@@ -309,9 +283,9 @@ body, h1, h3 {
 
         &:first-child {
             width: auto;
-            padding: 10px;
+            padding-left: 10px;
+            padding-right: 5px;
             text-align: left;
-            border-left: none;
         }
 
         &:last-child {
@@ -321,20 +295,36 @@ body, h1, h3 {
 }
 
 .menu-section {
-    border-top: 1px solid $yellow;
-    border-bottom: 1px solid $yellow;
+    border-top: 2px solid $yellow;
+    border-bottom: none !important;
 
     th {
-        color: $yellow;
+        $height: 52px;
+
+        position: relative;
+        height: $height;
         font-size: $header-text-mid;
 
         &:first-child {
             font-size: $header-text-big;
         }
-    }
 
-    &:first-child {
-        border-top: none;
+        & > div,
+        &::before {
+            $margin: 5px;
+            $padding: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: $margin;
+            padding: $padding;
+            line-height: $height - 2*$margin - 2*$padding;
+
+            color: $red;
+            background-color: $yellow;
+        }
     }
 }
 
@@ -352,15 +342,6 @@ body, h1, h3 {
 
 .menu-pizza-small {
     &::before {
-        content: "P";
-        @media only screen and (min-width: 64em) { // Large+
-            content: "Pequena";
-        }
-    }
-}
-
-.menu-pizza-medium {
-    &::before {
         content: "M";
         @media only screen and (min-width: 64em) { // Large+
             content: "Media";
@@ -368,11 +349,20 @@ body, h1, h3 {
     }
 }
 
-.menu-pizza-big {
+.menu-pizza-medium {
     &::before {
         content: "G";
         @media only screen and (min-width: 64em) { // Large+
             content: "Grande";
+        }
+    }
+}
+
+.menu-pizza-big {
+    &::before {
+        content: "GG";
+        @media only screen and (min-width: 64em) { // Large+
+            content: "Gigante";
         }
     }
 }
