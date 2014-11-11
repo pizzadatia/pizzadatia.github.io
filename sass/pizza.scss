@@ -166,8 +166,15 @@ body, h1, h3 {
 }
 
 .content-menu {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 $footer-height*3/5; // Medium
+
+    @media only screen and (max-width: 40em) { // Small
+        padding: 0;
+    }
+
+    @media only screen and (min-width: 64em) { // Large
+        padding-bottom: $footer-height;
+    }
 }
 
 .content-side {
@@ -240,16 +247,7 @@ body, h1, h3 {
 // Menu ------------------------------------------------------------------------
 .pizza-menu-wrapper {
     padding: 5px;
-    padding-bottom: $footer-height*2/3;
     background-color: rgba(0,0,0,0.2);
-
-    @media only screen and (max-width: 40em) { // Small
-        padding: 0;
-    }
-
-    @media only screen and (min-width: 64em) { // Large
-        padding-bottom: $footer-height;
-    }
 }
 
 .pizza-menu {
