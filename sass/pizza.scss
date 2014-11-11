@@ -79,7 +79,7 @@ body, h1, h3 {
 .container {
     background-color: #a10018;
     background-image: url("../img/bg-red.png");
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     background-repeat: repeat-y;
     background-position: top center;
@@ -194,7 +194,7 @@ body, h1, h3 {
 
 .side-yellow {
     background-image: url("../img/bg-yellow.png");
-    background-attachment: fixed;
+    // background-attachment: fixed;
     padding-bottom: 2*$footer-height; // Medium
 
     @media only screen and (max-width: 40em) { // Small
@@ -270,9 +270,9 @@ body, h1, h3 {
             border-bottom: 2px solid $yellow;
         }
 
-        &:hover td {
-            background: fade-out($yellow, 0.75);
-        }
+        // &:hover td {
+        //     background: fade-out($yellow, 0.75);
+        // }
     }
 
     td, th {
