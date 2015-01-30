@@ -165,6 +165,22 @@ body, h1, h3 {
     margin: 0 !important;
 }
 
+.content-info {
+    text-align: center;
+    padding: 20px;
+    line-height: 1em;
+
+    a, a:visited, h1, h3 {
+        color: #fff;
+        margin: 0 0 10px 0;
+    }
+
+    a {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+}
+
 .content-menu {
     padding: 0 0 $footer-height*3/5; // Medium
 
