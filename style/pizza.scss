@@ -1,5 +1,8 @@
 @charset "UTF-8";
-@import "compass";
+@import "../node_modules/zurb-foundation-5/scss/foundation/components/grid";
+@import "../node_modules/zurb-foundation-5/scss/foundation/components/visibility";
+@import "../node_modules/zurb-foundation-5/scss/normalize";
+@import "../node_modules/font-face-mixin/fontface";
 
 // Configs ---------------------------------------------------------------------
 $yellow: #fbc242;
@@ -27,8 +30,16 @@ $footer-height: 110px;
       display: inline-block;
       height: 100%;
       vertical-align: middle;
-      margin-right: -0.25em; // Adjusts for spacing
+      margin-right: -.25em; // Adjusts for spacing
     }
+}
+
+@function font-url($font-name) {
+  @return url('../fonts/' + $font-name);
+}
+
+@function image-url($image-name) {
+  @return url('../images/' + $image-name);
 }
 
 .center-content {
@@ -42,8 +53,8 @@ $footer-height: 110px;
     &::after {
         content: "~";
         position: absolute;
-        left: 0.1em;
-        top: -0.55em;
+        left: .1em;
+        top: -.55em;
     }
 }
 .char-acute {
@@ -53,26 +64,38 @@ $footer-height: 110px;
     &::after {
         content: "´";
         position: absolute;
-        left: 0.2em;
-        top: -0.2em;
+        left: .2em;
+        top: -.2em;
+    }
+}
+
+.char-grave {
+    position: relative;
+    line-height: 1em;
+
+    &::after {
+        content: "ˆ";
+        position: absolute;
+        left: .14em;
+        top: -.2em;
     }
 }
 
 .char-cedilla {
     position: relative;
     line-height: 1em;
-    
+
     &::after {
         content: "¸";
         position: absolute;
-        left: 0.1em;
+        left: .1em;
         bottom: 0;
     }
 }
 
 // Globals ---------------------------------------------------------------------
 
-@include font-face("Raygun", font-files("raygun.woff", "raygun.ttf", "raygun.svg"), "raygun.eot");
+@include font-face("Raygun", "../fonts/raygun");
 
 body {
     background-color: white;
@@ -84,7 +107,7 @@ body, h1, h3 {
 
 .container {
     background-color: #a10018;
-    background-image: url("../img/bg-red.png");
+    background-image: image-url("bg-red.png");
     // background-attachment: fixed;
     background-size: cover;
     background-repeat: repeat-y;
@@ -95,7 +118,7 @@ body, h1, h3 {
 
 .header {
     $border: 12px;
-    background-image: url("../img/header-bg.png");
+    background-image: image-url("header-bg.png");
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
@@ -126,7 +149,7 @@ body, h1, h3 {
 
 .contact-subtitle {
     color: white;
-    font-size: 0.8em;
+    font-size: .8em;
     margin-bottom: 5px;
 }
 
@@ -147,7 +170,7 @@ body, h1, h3 {
 
     .contact-delivery-area {
         color: white;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,.2);
     }
 }
 
@@ -217,12 +240,12 @@ body, h1, h3 {
     height: 400px; // From image
     width: 200px; // From image
     margin: 50px 0;
-    background-image: url("../img/banner-delivery.png");
+    background-image: image-url("banner-delivery.png");
     background-position: top left;
 }
 
 .side-yellow {
-    background-image: url("../img/bg-yellow.png");
+    background-image: image-url("bg-yellow.png");
     // background-attachment: fixed;
     padding-bottom: 2*$footer-height; // Medium
 
@@ -270,7 +293,7 @@ body, h1, h3 {
 // Menu ------------------------------------------------------------------------
 .pizza-menu-wrapper {
     padding: 5px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,.2);
 }
 
 .pizza-menu {
@@ -285,14 +308,14 @@ body, h1, h3 {
 
     tr {
         background-color: transparent !important;
-        border-bottom: 1px dotted transparentize($yellow, 0.75);
+        border-bottom: 1px dotted transparentize($yellow, .75);
 
         &:last-child td {
             border-bottom: 2px solid $yellow;
         }
 
         // &:hover td {
-        //     background: fade-out($yellow, 0.75);
+        //     background: fade-out($yellow, .75);
         // }
     }
 
@@ -308,7 +331,7 @@ body, h1, h3 {
         text-transform: uppercase;
         text-overflow: ellipsis;
         font-size: $header-text-small;
-        
+
         @media only screen and (max-width: 40em) { // Small
             width: 16%;
         }

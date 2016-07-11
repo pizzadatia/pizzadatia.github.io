@@ -1,0 +1,27 @@
+{
+  "name": "pizza-da-tia",
+  "version": "1.0.0",
+  "description": "Pizza da Tia",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run build:sass",
+    "build:sass": "node-sass --source-map true --output-style compressed style/pizza.scss style/pizza.css",
+    "watch": "npm run watch:sass",
+    "watch:sass": "npm run build:sass -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pizzadatia/pizzadatia.github.io.git"
+  },
+  "author": "Rômulo Fernandes",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/pizzadatia/pizzadatia.github.io/issues"
+  },
+  "homepage": "https://pedenatia.com",
+  "devDependencies": {
+    "font-face-mixin": "^1.1.0",
+    "node-sass": "^3.8.0",
+    "zurb-foundation-5": "^5.4.7"
+  }
+}
