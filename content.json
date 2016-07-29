@@ -1,0 +1,49 @@
+{
+  "delivery": [
+    "Rocinha",
+    "Gávea",
+    "São Conrado",
+    "Leblon",
+    "Ipanema",
+    "Lagoa",
+    "Jardim Botânico",
+    "Vidigal"
+  ],
+  "phones": [
+    { "number": "3324-3735", "oper": "Vivo" },
+    { "number": "2422-2516", "oper": "Oi" }
+  ],
+  "whatsapp": [
+    { "number": "99578-0834", "oper": "Vivo" }
+  ],
+  "salty": [
+    { "name": "Mussarela", "P": "19,90", "M": "27,90", "G": "37,90" },
+    { "name": "Marguerita", "P": "20,90", "M": "28,90", "G": "39,90" },
+    { "name": "Atum", "P": "21,90", "M": "29,90", "G": "41,90" },
+    { "name": "Vegetariana", "P": "21,90", "M": "29,90", "G": "41,90" },
+    { "name": "Presunto", "P": "21,90", "M": "29,90", "G": "41,90" },
+    { "name": "Palmito", "P": "21,90", "M": "29,90", "G": "41,90" },
+    { "name": "Champignon", "P": "21,90", "M": "29,90", "G": "41,90" },
+    { "name": "Frango com catupiry", "P": "22,90", "M": "31,90", "G": "42,90" },
+    { "name": "Calabresa com cebola", "P": "22,90", "M": "31,90", "G": "42,90" },
+    { "name": "Carne seca com cebola", "P": "22,90", "M": "31,90", "G": "42,90" },
+    { "name": "Calabresa com catupiry", "P": "23,90", "M": "32,90", "G": "45,90" },
+    { "name": "Carne seca com catupiry", "P": "23,90", "M": "32,90", "G": "45,90" },
+    { "name": "Portuguesa", "P": "24,90", "M": "33,90", "G": "47,90" },
+    { "name": "Quatro queijos", "P": "24,90", "M": "33,90", "G": "47,90" },
+    { "name": "Camarão", "P": "27,90", "M": "34,90", "G": "48,90" },
+    { "name": "Camarão com catupiry", "P": "29,90", "M": "35,90", "G": "49,90" }
+  ],
+  "sweet": [
+    { "name": "Chocolate", "P": "22,90", "M": "32,90", "G": "42,90" },
+    { "name": "Da Tia (Banana com canela e borda de doce de leite)", "P": "24,90", "M": "34,90", "G": "44,90" },
+    { "name": "Doce de leite", "P": "24,90", "M": "34,90", "G": "44,90" }
+  ],
+  "extras": [
+    { "name": "Borda Recheada (catupiry ou doce de leite)", "P": "3,50", "M": "5,00", "G": "5,50" },
+    { "name": "Acréscimo Confeti", "P": "3,50", "M": "5,00", "G": "5,50" }
+  ],
+  "drinks": [
+    { "name": "Refrigerante 1,5l", "price": "5,00" }
+  ]
+}

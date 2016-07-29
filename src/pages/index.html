@@ -1,0 +1,12 @@
+{% extends 'base.njk' %}
+
+{% block head %}
+  <title>Pizza da Tia</title>
+  <link rel="stylesheet" href="dist/pizza.css" />
+{% endblock %}
+
+{% block content %}
+  <div class="pizza-menu-wrapper">
+    {% include 'pizza-menu.njk' %}
+  </div>
+{% endblock %}

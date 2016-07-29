@@ -1,0 +1,5 @@
+<div class="contact-title">Telefones</div>
+{% for phone in phones %}
+<a class="contact-number" href="tel:{{ phone.number | replace('-', '') }}">{{ phone.number }}</a>
+<div class="contact-subtitle">({{ phone.oper }})</div>
+{% endfor %}

@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import "../node_modules/zurb-foundation-5/scss/foundation/components/grid";
-@import "../node_modules/zurb-foundation-5/scss/foundation/components/visibility";
-@import "../node_modules/zurb-foundation-5/scss/normalize";
-@import "../node_modules/font-face-mixin/fontface";
+@import "../../node_modules/zurb-foundation-5/scss/foundation/components/grid";
+@import "../../node_modules/zurb-foundation-5/scss/foundation/components/visibility";
+@import "../../node_modules/zurb-foundation-5/scss/normalize";
+@import "../../node_modules/font-face-mixin/fontface";
 
 // Configs ---------------------------------------------------------------------
 $yellow: #fbc242;
@@ -15,6 +15,19 @@ $header-text-small: 1em;
 $footer-height: 110px;
 
 // Helpers ---------------------------------------------------------------------
+
+@function font-path($font-name) {
+  @return '../assets/fonts/' + $font-name;
+}
+
+@function font-url($font-name) {
+  @return url(font-path($font-name));
+}
+
+@function image-url($image-name) {
+  @return url('../assets/images/' + $image-name);
+}
+
 @mixin center-content {
     height: 100%;
     text-align: center;
@@ -32,14 +45,6 @@ $footer-height: 110px;
       vertical-align: middle;
       margin-right: -.25em; // Adjusts for spacing
     }
-}
-
-@function font-url($font-name) {
-  @return url('../fonts/' + $font-name);
-}
-
-@function image-url($image-name) {
-  @return url('../images/' + $image-name);
 }
 
 .center-content {
@@ -95,7 +100,7 @@ $footer-height: 110px;
 
 // Globals ---------------------------------------------------------------------
 
-@include font-face("Raygun", "../fonts/raygun");
+@include font-face("Raygun", font-path("raygun"));
 
 body {
     background-color: white;
@@ -151,6 +156,7 @@ body, h1, h3 {
     color: white;
     font-size: .8em;
     margin-bottom: 5px;
+    text-transform: lowercase;
 }
 
 .contact-number {
@@ -171,6 +177,8 @@ body, h1, h3 {
     .contact-delivery-area {
         color: white;
         background-color: rgba(0,0,0,.2);
+        overflow: hidden;
+        word-break:break-word;
     }
 }
 
@@ -202,6 +210,7 @@ body, h1, h3 {
     a, a:visited, h1, h3 {
         color: #fff;
         margin: 0 0 10px 0;
+        text-transform: uppercase;
     }
 
     a {

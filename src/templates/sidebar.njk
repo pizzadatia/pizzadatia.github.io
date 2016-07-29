@@ -1,0 +1,31 @@
+{% macro deliveryArea() %}
+  <div class="contact-delivery-area">
+    {{ "Área de entrega" | latinFix }}
+    <br/>
+    {{ delivery | join(", ") | latinFix }}
+  </div>
+{% endmacro %}
+
+<div class="side-delivery show-for-medium-up"></div>
+
+<div class="side-yellow">
+  <div class="pizza-contact hide-for-medium-up">
+    <div class="contact-container">
+      {% include 'phone.njk' %}
+    </div>
+    <div class="contact-container">
+      {% include 'whatsapp.njk' %}
+    </div>
+    <div class="contact-addr">
+      {{ deliveryArea() }}
+    </div>
+  </div>
+  <div class="pizza-contact show-for-medium-up">
+    <div class="contact-addr">
+      {{ deliveryArea() }}
+    </div>
+  </div>
+  <div class="pizza-fb">
+    <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpedenatia&amp;locale=pt_BR&amp;height=182&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;show_border=false" scrolling="no" frameborder="0"></iframe>
+  </div>
+</div>

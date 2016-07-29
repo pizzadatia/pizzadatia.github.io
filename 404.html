@@ -1,103 +1,148 @@
 <!doctype html>
 <html lang="pt">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizza da Tia</title>
-    <link rel="stylesheet" href="css/foundation.min.css" />
-    <link rel="stylesheet" href="css/pizza.css" />
-    <link rel="shortcut icon" href="img/icon.png">
+<head>
+  
+  <title>Pizza da Tia</title>
+  <link rel="stylesheet" href="dist/pizza.css" />
 
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
-      <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
-      <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-    <![endif]-->
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments);};i[r].l=1*new Date();a=s.createElement(o);
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-59041037-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <div class="container row">
-      <div class="header row">
-        <div class="medium-3 column show-for-medium-up">
-          <div class="header-side header-contact">
-            <div class="contact-title">Telefones</div>
-            <a class="contact-number" href="tel:33243735">3324-3735</a>
-            <div class="contact-subtitle">(vivo)</div>
-            <a class="contact-number" href="tel:24222516">2422-2516</a>
-            <div class="contact-subtitle">(oi)</div>
-          </div>
-        </div>
-        <img class="medium-6 column header-logo" src="img/header-logo.png" />
-        <div class="medium-3 column show-for-medium-up">
-          <div class="header-side header-contact">
-            <div class="contact-title">WhatsApp</div>
-            <span class="contact-number">99578-0834</span>
-            <div class="contact-subtitle">(vivo)</div>
-          </div>
-        </div>
-      </div>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-title" content="Pizza da Tia">
+<meta name="application-name" content="Pizza da Tia">
+<meta name="theme-color" content="#cb1827">
+<meta name="msapplication-TileColor" content="#cb1827">
+<meta name="msapplication-TileImage" content="icons/mstile-150x150.png">
+<meta name="msapplication-config" content="icons/browserconfig.xml">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="icons/manifest.json">
 
-      <div class="content row">
-        <div class="medium-8 medium-push-4 column content-menu">
-          <div class="content-info">
-            <h3>erro 404</h3>
-            <h1>pizza n<span class="char-tilde">a</span>o encontrada</h1>
-            <a href="index.html">voltar ao cardápio</a>
-          </div>
-        </div>
 
-        <div class="medium-4 medium-pull-8 column content-side">
-          <div class="side-delivery show-for-medium-up">
-          </div>
-          <div class="side-yellow">
-            <div class="pizza-contact hide-for-medium-up">
-              <div class="contact-container">
-                <div class="contact-title">Telefones</div>
-                <a class="contact-number" href="tel:33243735">3324-3735</a>
-                <div class="contact-subtitle">(vivo)</div>
-                <a class="contact-number" href="tel:24222516">2422-2516</a>
-                <div class="contact-subtitle">(oi)</div>
-              </div>
-              <div class="contact-container">
-                <div class="contact-title">WhatsApp</div>
-                <span class="contact-number">99578-0834</span>
-                <div class="contact-subtitle">(vivo)</div>
-              </div>
-              <div class="contact-addr">
-                Travessa Liberdade, 7 - Rocinha - RJ
-                <div class="contact-delivery-area">
-                  <span class="char-acute">A</span>rea de entrega:<br/>
-                  Rocinha e S<span class="char-tilde">a</span>o Conrrado
-                </div>
-              </div>
-            </div>
-            <div class="pizza-contact show-for-medium-up">
-              <div class="contact-addr">
-                Travessa Liberdade, 7 - Rocinha - RJ
-                <div class="contact-delivery-area">
-                  <span class="char-acute">A</span>rea de entrega:<br/>
-                  Rocinha e S<span class="char-tilde">a</span>o Conrrado
-                </div>
-              </div>
-            </div>
-            <div class="pizza-fb">
-              <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpedenatia&amp;locale=pt_BR&amp;height=182&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;show_border=false" scrolling="no" frameborder="0"></iframe>
-            </div>
-          </div>
-        </div>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <![endif]-->
 
-        <img class="small-12 column content-footer" src="img/content-footer.png" />
-      </div>
+  <script>
+    (function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments);};i[r].l=1*new Date();a=s.createElement(o);
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-59041037-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <div class="container row">
+    <div class="header row">
+      
+      <div class="medium-3 column show-for-medium-up">
+  <div class="header-side header-contact">
+    <div class="contact-title">Telefones</div>
+
+<a class="contact-number" href="tel:33243735">3324-3735</a>
+<div class="contact-subtitle">(Vivo)</div>
+
+<a class="contact-number" href="tel:24222516">2422-2516</a>
+<div class="contact-subtitle">(Oi)</div>
+
+
+  </div>
+</div>
+
+<img class="medium-6 column header-logo" src="assets/images/header-logo.png" />
+
+<div class="medium-3 column show-for-medium-up">
+  <div class="header-side header-contact">
+    <div class="contact-title">WhatsApp</div>
+
+<span class="contact-number">99578-0834</span>
+<div class="contact-subtitle">(Vivo)</div>
+
+
+  </div>
+</div>
+
+      
     </div>
-  </body>
+
+    <div class="content row">
+      <div class="medium-8 medium-push-4 column content-menu">
+        
+<div class="content-info">
+  <h3>erro 404</h3>
+  <h1>
+    pizza n<span class="char-tilde">a</span>o encontrada
+  </h1>
+  <a href="index.html">
+    voltar ao card<span class="char-acute">a</span>pio
+  </a>
+</div>
+
+      </div>
+
+      <div class="medium-4 medium-pull-8 column content-side">
+        
+        
+
+<div class="side-delivery show-for-medium-up"></div>
+
+<div class="side-yellow">
+  <div class="pizza-contact hide-for-medium-up">
+    <div class="contact-container">
+      <div class="contact-title">Telefones</div>
+
+<a class="contact-number" href="tel:33243735">3324-3735</a>
+<div class="contact-subtitle">(Vivo)</div>
+
+<a class="contact-number" href="tel:24222516">2422-2516</a>
+<div class="contact-subtitle">(Oi)</div>
+
+
+    </div>
+    <div class="contact-container">
+      <div class="contact-title">WhatsApp</div>
+
+<span class="contact-number">99578-0834</span>
+<div class="contact-subtitle">(Vivo)</div>
+
+
+    </div>
+    <div class="contact-addr">
+      
+  <div class="contact-delivery-area">
+    <span class="char-acute">A</span>rea de entrega
+    <br/>
+    Rocinha, G<span class="char-acute">a</span>vea, S<span class="char-tilde">a</span>o Conrado, Leblon, Ipanema, Lagoa, Jardim Bot<span class="char-grave">a</span>nico, Vidigal
+  </div>
+
+    </div>
+  </div>
+  <div class="pizza-contact show-for-medium-up">
+    <div class="contact-addr">
+      
+  <div class="contact-delivery-area">
+    <span class="char-acute">A</span>rea de entrega
+    <br/>
+    Rocinha, G<span class="char-acute">a</span>vea, S<span class="char-tilde">a</span>o Conrado, Leblon, Ipanema, Lagoa, Jardim Bot<span class="char-grave">a</span>nico, Vidigal
+  </div>
+
+    </div>
+  </div>
+  <div class="pizza-fb">
+    <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpedenatia&amp;locale=pt_BR&amp;height=182&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;show_border=false" scrolling="no" frameborder="0"></iframe>
+  </div>
+</div>
+
+        
+      </div>
+
+      <img class="small-12 column content-footer" src="assets/images/content-footer.png" />
+    </div>
+  </div>
+</body>
 </html>

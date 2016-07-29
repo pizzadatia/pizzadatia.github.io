@@ -1,0 +1,48 @@
+<!doctype html>
+<html amp lang="pt">
+<head>
+  <title>Pizza da Tia</title>
+  <link rel="canonical" href="./index.html">
+  {% include 'head.njk' %}
+
+  <style amp-boilerplate>
+    body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+    </style>
+  </noscript>
+
+  <style amp-custom>
+    {% set stylesheet -%}{% include 'pizza.css' %}{%- endset %}
+    {{ stylesheet | replace('@charset "UTF-8";', '') | replace('!important', '') | replace('../assets', 'assets') | safe }}
+  </style>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+  <div class="container row">
+    <div class="header row">
+      {% set header -%}{% include 'header.njk' %}{%- endset %}
+      {{ header | replace('<img', '<amp-img') | safe }}
+    </div>
+
+    <div class="content row">
+      <div class="medium-8 medium-push-4 column content-menu">
+        {% block content %}
+        <div class="pizza-menu-wrapper">
+          {% include 'pizza-menu.njk' %}
+        </div>
+        {% endblock %}
+      </div>
+
+      <div class="medium-4 medium-pull-8 column content-side">
+        {% include 'sidebar.njk' | replace('iframe', 'amp-iframe') %}
+      </div>
+
+      <amp-img class="small-12 column content-footer" src="assets/images/content-footer.png" />
+    </div>
+  </div>
+</body>
+</html>

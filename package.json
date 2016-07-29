@@ -4,10 +4,8 @@
   "description": "Pizza da Tia",
   "main": "index.html",
   "scripts": {
-    "build": "npm run build:sass",
-    "build:sass": "node-sass --source-map true --output-style compressed style/pizza.scss style/pizza.css",
-    "watch": "npm run watch:sass",
-    "watch:sass": "npm run build:sass -- --watch"
+    "build": "gulp",
+    "start": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -20,8 +18,16 @@
   },
   "homepage": "https://pedenatia.com",
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "browser-sync": "^2.13.0",
+    "cssnano": "^3.7.3",
     "font-face-mixin": "^1.1.0",
-    "node-sass": "^3.8.0",
+    "gulp": "^3.9.1",
+    "gulp-nunjucks": "^2.2.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
     "zurb-foundation-5": "^5.4.7"
   }
 }

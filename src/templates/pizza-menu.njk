@@ -1,0 +1,45 @@
+{% macro pizzaSection(name) %}
+<tr class="menu-section menu-pizza">
+  <th><div>{{ name | latinFix }}</div></th>
+  <th class="menu-pizza-small"></th>
+  <th class="menu-pizza-medium"></th>
+  <th class="menu-pizza-big"></th>
+</tr>
+{% endmacro %}
+
+{% macro pizzaRow(pizza) %}
+<tr class="menu-pizza">
+  <td>{{ pizza.name | latinFix }}</td>
+  <td class="menu-price">{{ pizza.P }}</td>
+  <td class="menu-price">{{ pizza.M }}</td>
+  <td class="menu-price">{{ pizza.G }}</td>
+</tr>
+{% endmacro %}
+
+<table class="pizza-menu">
+  {{ pizzaSection('Salgadas')}}
+  {% for pizza in salty %}
+  {{ pizzaRow(pizza) }}
+  {% endfor %}
+
+  {{ pizzaSection('Doces')}}
+  {% for pizza in sweet %}
+  {{ pizzaRow(pizza) }}
+  {% endfor %}
+
+  {{ pizzaSection('Extra')}}
+  {% for extra in extras %}
+  {{ pizzaRow(extra) }}
+  {% endfor %}
+
+  <tr class="menu-section menu-drink">
+    <th><div>Bebidas</div></th>
+    <th colspan="3"><div></div></th>
+  </tr>
+  {% for drink in drinks %}
+  <tr class="menu-drink">
+    <td>{{ drink.name | latinFix }}</td>
+    <td class="menu-price" colspan="3">{{ drink.price }}</td>
+  </tr>
+  {% endfor %}
+</table>

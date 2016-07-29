@@ -1,0 +1,18 @@
+{% extends 'base.njk' %}
+
+{% block head %}
+  <title>Pizza da Tia</title>
+  <link rel="stylesheet" href="dist/pizza.css" />
+{% endblock %}
+
+{% block content %}
+<div class="content-info">
+  <h3>erro 404</h3>
+  <h1>
+    {{ "pizza não encontrada" | latinFix }}
+  </h1>
+  <a href="index.html">
+    {{ "voltar ao cardápio" | latinFix }}
+  </a>
+</div>
+{% endblock %}
