@@ -10,11 +10,11 @@
     "Vidigal"
   ],
   "phones": [
-    { "number": "3324-3735", "oper": "Vivo" },
-    { "number": "2422-2516", "oper": "Oi" }
+    { "number": "3324-3735" },
+    { "number": "2422-2516" }
   ],
   "whatsapp": [
-    { "number": "99578-0834", "oper": "Vivo" }
+    { "number": "99578-0834" }
   ],
   "salty": [
     { "name": "Mussarela", "P": "19,90", "M": "27,90", "G": "37,90" },
@@ -40,8 +40,7 @@
     { "name": "Doce de leite", "P": "24,90", "M": "34,90", "G": "44,90" }
   ],
   "extras": [
-    { "name": "Borda Recheada (catupiry ou doce de leite)", "P": "3,50", "M": "5,00", "G": "5,50" },
-    { "name": "Acréscimo Confeti", "P": "3,50", "M": "5,00", "G": "5,50" }
+    { "name": "Acréscimo de igrediente", "P": "3,00", "M": "5,00", "G": "7,50" }
   ],
   "drinks": [
     { "name": "Refrigerante 1,5l", "price": "5,00" }

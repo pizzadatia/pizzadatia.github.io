@@ -1,5 +1,7 @@
 <div class="contact-title">WhatsApp</div>
 {% for phone in whatsapp %}
 <span class="contact-number">{{ phone.number }}</span>
+{% if phone.oper %}
 <div class="contact-subtitle">({{ phone.oper }})</div>
+{% endif %}
 {% endfor %}
