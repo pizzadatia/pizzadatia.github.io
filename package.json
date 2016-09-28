@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp",
-    "start": "gulp watch"
+    "start": "gulp watch",
+    "publish": "git add -A . && git commit -a -m 'Atualização de conteúdo' && git push origin"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,12 @@
     "font-face-mixin": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-nunjucks": "^2.2.0",
+    "gulp-open": "^2.0.0",
     "gulp-postcss": "^6.1.1",
     "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
+    "run-sequence": "^1.2.2",
     "zurb-foundation-5": "^5.4.7"
   }
 }

@@ -2,12 +2,15 @@ const gulp = require('gulp');
 const nunjucks = require('nunjucks');
 const gulpNunjucks = require('gulp-nunjucks');
 const sourcemaps = require('gulp-sourcemaps');
+const open = require('gulp-open');
+const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const purify = require('gulp-purifycss');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
+
 
 
 const latinFix = str => new nunjucks.runtime.SafeString(str
@@ -51,6 +54,13 @@ gulp.task(htmlTask, () => {
     .pipe(browserSync.stream())
 });
 
+const openTask = 'open';
+const openTarget = './index.html';
+
+gulp.task(openTask, () => gulp.src(openTarget)
+  .pipe(open())
+);
+
 /** Styles */
 const styleTask = 'style';
 const styleSrc = './src/style/*.scss';
@@ -81,4 +91,7 @@ gulp.task('watch', () => {
   gulp.watch(styleSrc, [styleTask]);
 });
 
-gulp.task('default', [htmlTask, styleTask]);
+gulp.task('default', () => runSequence(
+  [htmlTask, styleTask],
+  openTask
+));
