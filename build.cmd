@@ -1,8 +1,3 @@
 @echo off
-cd %~dp0
+npm run build
 
-echo Building pages
-call npm run build
-
-echo Launching site
-explorer index.html
