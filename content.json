@@ -40,7 +40,7 @@
     { "name": "Doce de leite", "P": "24,90", "M": "34,90", "G": "44,90" }
   ],
   "extras": [
-    { "name": "Acréscimo de igrediente", "P": "3,00", "M": "5,00", "G": "7,50" }
+    { "name": "Acréscimo de ingrediente", "P": "3,00", "M": "5,00", "G": "7,50" }
   ],
   "drinks": [
     { "name": "Refrigerante 1,5l", "price": "5,00" }
