@@ -1,2 +1,4 @@
 @echo off
-npm run update
+call npm run update
+call npm install
+pause

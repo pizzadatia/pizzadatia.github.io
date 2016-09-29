@@ -1,3 +1,3 @@
 @echo off
-npm run publish
-
+call npm run publish
+pause

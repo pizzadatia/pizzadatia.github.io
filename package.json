@@ -7,7 +7,7 @@
     "build": "gulp",
     "start": "gulp watch",
     "publish": "node publish.js",
-    "update": "git fetch && git pull"
+    "update": "git fetch && git pull origin master"
   },
   "repository": {
     "type": "git",
