@@ -1,12 +1,9 @@
 #🍕 Pizza da Tia 🍕
 
 ### Guia de modificação 
-- Editar o content.json
-- Executar o build.cmd
-- Botão direito na pasta > "Git GUI Here"
-- Clicar em "Stage Changed"
-- Confirmar qualquer coisa que aparecer
+- Executar o `update.cmd`
+- Editar o `content.json`
+- Executar o `build.cmd`
+- Verificar o preview que abrirá automaticamente
+- Executar o `publish.cmd`
 - Escrever relatório das modificações (1 linha curta)
-- Clicar em "Commit"
-- Clicar em "Push"
-- Confirmar a tela de push
