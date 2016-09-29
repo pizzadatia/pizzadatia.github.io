@@ -16,7 +16,7 @@ const execPromise = (command) => new Promise((resolve, reject) => {
 execPromise('git add -A .')
   .then(() => prompt('Relatório de alterações:\n'))
   .then((answer) => execPromise(`git commit -a -m "${answer}"`))
-  .then(() => execPromise('git push origin'))
+  .then(() => execPromise('git push origin master'))
   .then(() => process.exit(0))
   .catch(error => {
     console.error('Error:', error);
