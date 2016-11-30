@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://pedenatia.com/",
+  "name": "Pizza da Tia",
+  "servesCuisine": "Pizza",
+  "priceRange": "$",
+  "image": "https://pedenatia.com/assets/images/logo.png",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "16:30",
+      "closes": "00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday", "Saturday"],
+      "opens": "17:30",
+      "closes": "01:30"
+    }
+  ],
+  "address" :{
+    "@type": "PostalAddress",
+    "streetAddress": "Travessa Escada, 2",
+    "addressLocality": "Rio de Janeiro",
+    "addressRegion": "RJ",
+    "postalCode": "22451-580",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5521{{ phones[0].number | replace("-", "") }}"
+}
+</script>
