@@ -18,27 +18,27 @@
     { "number": "99578-0834" }
   ],
   "salty": [
-    { "name": "Mussarela", "P": "19,90", "M": "32,90", "G": "44,90" },
-    { "name": "Champignon", "P": "24,90", "M": "32,90", "G": "46,90" },
-    { "name": "Atum", "P": "24,90", "M": "32,90", "G": "46,90" },
-    { "name": "Vegetariana", "P": "24,90", "M": "32,90", "G": "46,90" },
-    { "name": "Presunto", "P": "24,90", "M": "32,90", "G": "46,90" },
-    { "name": "Palmito", "P": "24,90", "M": "32,90", "G": "46,90" },
-    { "name": "Marguerita", "P": "25,90", "M": "34,90", "G": "46,90" },
-    { "name": "Frango com catupiry", "P": "25,90", "M": "34,90", "G": "47,90" },
-    { "name": "Calabresa com cebola", "P": "25,90", "M": "34,90", "G": "47,90" },
-    { "name": "Carne seca com cebola", "P": "25,90", "M": "34,90", "G": "47,90" },
-    { "name": "Calabresa com catupiry", "P": "26,90", "M": "35,90", "G": "50,90" },
-    { "name": "Carne seca com catupiry", "P": "26,90", "M": "35,90", "G": "50,90" },
-    { "name": "Portuguesa", "P": "27,90", "M": "36,90", "G": "52,90" },
-    { "name": "Quatro queijos", "P": "27,90", "M": "36,90", "G": "52,90" },
-    { "name": "Camarão", "P": "30,90", "M": "37,90", "G": "54,90" },
-    { "name": "Camarão com catupiry", "P": "32,90", "M": "38,90", "G": "56,90" }
+    { "name": "Mussarela", "P": "19,90", "M": "34,90", "G": "45,90" },
+    { "name": "Champignon", "P": "24,90", "M": "35,90", "G": "48,90" },
+    { "name": "Atum", "P": "24,90", "M": "34,90", "G": "48,90" },
+    { "name": "Vegetariana", "P": "24,90", "M": "36,90", "G": "49,90" },
+    { "name": "Presunto", "P": "24,90", "M": "34,90", "G": "48,90" },
+    { "name": "Palmito", "P": "24,90", "M": "34,90", "G": "48,90" },
+    { "name": "Marguerita", "P": "25,90", "M": "37,90", "G": "48,90" },
+    { "name": "Frango com catupiry", "P": "25,90", "M": "37,90", "G": "50,90" },
+    { "name": "Calabresa com cebola", "P": "25,90", "M": "36,90", "G": "49,90" },
+    { "name": "Carne seca com cebola", "P": "25,90", "M": "37,90", "G": "50,90" },
+    { "name": "Calabresa com catupiry", "P": "26,90", "M": "37,90", "G": "52,90" },
+    { "name": "Carne seca com catupiry", "P": "26,90", "M": "39,90", "G": "53,90" },
+    { "name": "Portuguesa", "P": "27,90", "M": "39,90", "G": "54,90" },
+    { "name": "Quatro queijos", "P": "27,90", "M": "39,90", "G": "54,90" },
+    { "name": "Camarão", "P": "30,90", "M": "40,90", "G": "56,90" },
+    { "name": "Camarão com catupiry", "P": "32,90", "M": "41,90", "G": "59,90" }
   ],
   "sweet": [
-    { "name": "Chocolate", "P": "29,90", "M": "41,90", "G": "55,90" },
-    { "name": "Da Tia (Banana com canela e borda de doce de leite)", "P": "31,90", "M": "42,90", "G": "58,90" },
-    { "name": "Doce de leite", "P": "28,90", "M": "39,90", "G": "52,90" }
+    { "name": "Chocolate", "P": "33,90", "M": "44,90", "G": "59,90" },
+    { "name": "Da Tia (Banana com canela e borda de doce de leite)", "P": "33,90", "M": "44,90", "G": "59,90" },
+    { "name": "Doce de leite", "P": "28,90", "M": "42,90", "G": "52,90" }
   ],
   "extras": [
     { "name": "Acréscimo de ingrediente", "P": "3,50", "M": "5,50", "G": "7,50" }
