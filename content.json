@@ -27,13 +27,13 @@
     { "name": "Marguerita", "P": "25,90", "M": "37,90", "G": "48,90" },
     { "name": "Frango com catupiry", "P": "25,90", "M": "37,90", "G": "50,90" },
     { "name": "Calabresa com cebola", "P": "25,90", "M": "36,90", "G": "49,90" },
-    { "name": "Carne seca com cebola", "P": "25,90", "M": "37,90", "G": "50,90" },
+    { "name": "Carne seca com cebola", "P": "25,90", "M": "37,90", "G": "59,90" },
     { "name": "Calabresa com catupiry", "P": "26,90", "M": "37,90", "G": "52,90" },
-    { "name": "Carne seca com catupiry", "P": "26,90", "M": "39,90", "G": "53,90" },
+    { "name": "Carne seca com catupiry", "P": "26,90", "M": "46,90", "G": "64,90" },
     { "name": "Portuguesa", "P": "27,90", "M": "39,90", "G": "54,90" },
     { "name": "Quatro queijos", "P": "27,90", "M": "39,90", "G": "54,90" },
-    { "name": "Camarão", "P": "30,90", "M": "40,90", "G": "56,90" },
-    { "name": "Camarão com catupiry", "P": "32,90", "M": "41,90", "G": "59,90" }
+    { "name": "Camarão", "P": "30,90", "M": "44,90", "G": "62,90" },
+    { "name": "Camarão com catupiry", "P": "32,90", "M": "48,90", "G": "64,90" }
   ],
   "sweet": [
     { "name": "Chocolate", "P": "33,90", "M": "44,90", "G": "59,90" },
